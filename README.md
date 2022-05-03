@@ -14,8 +14,7 @@
   - Save build to artifacts (artifact)
 
 
-- DB (GitHub artifacts)
-- Auth (GitHub oauth)
-- Deploy (Github pages)
-- Vercel Serverless
+- DB (GitHub gists)
+- Deploy (Vercel)
+- Backend (Vercel Serverless)
 - 
