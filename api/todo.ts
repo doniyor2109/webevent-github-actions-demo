@@ -2,7 +2,7 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import { Octokit } from '@octokit/rest';
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: process.env.GHP_TOKEN,
 });
 
 const GIST_FILE_NAME = 'webevent-github-actions-demo__todo_list.json';
@@ -13,7 +13,7 @@ async function saveArtifact(request: VercelRequest, response: VercelResponse) {
   }
 
   await octokit.rest.gists.update({
-    gist_id: process.env.GITHUB_GIST_ID,
+    gist_id: process.env.GH_GIST_ID,
     files: { [GIST_FILE_NAME]: { content: JSON.stringify(request.body) } },
   });
 
@@ -22,7 +22,7 @@ async function saveArtifact(request: VercelRequest, response: VercelResponse) {
 
 async function getArtifact(request: VercelRequest, response: VercelResponse) {
   const { data } = await octokit.rest.gists.get({
-    gist_id: process.env.GITHUB_GIST_ID,
+    gist_id: process.env.GH_GIST_ID,
   });
   const { content } = data.files[GIST_FILE_NAME];
 
