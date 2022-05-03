@@ -24,6 +24,7 @@ class TodoModel implements ITodoModel {
 
     Utils.store(key).then((value) => {
       this.todos = value;
+      this.dispatch();
     });
   }
 
@@ -33,6 +34,10 @@ class TodoModel implements ITodoModel {
 
   public inform() {
     Utils.store(this.key, this.todos);
+    this.dispatch();
+  }
+
+  private dispatch() {
     this.onChanges.forEach(function (cb) {
       cb();
     });

@@ -1,36 +1,35 @@
 const BASE_URL = import.meta.VITE_VERCEL_URL || location.origin;
 
-function artifact(name: string) {
-  const url = new URL('/api/artifact', BASE_URL);
-  url.searchParams.set('name', name);
+function api() {
+  const url = new URL('/api/todo', BASE_URL);
 
   function fetchArtifact(init?: RequestInit) {
-    return fetch(url.toString(), init).then((res) => res.json());
+    return fetch(url.toString(), init);
   }
 
   return {
     get() {
-      return fetchArtifact({ method: 'GET' });
+      return fetchArtifact({ method: 'GET' }).then((res) => res.json());
     },
     save(value: any) {
       return fetchArtifact({
         method: 'POST',
         body: JSON.stringify(value),
         headers: {
-          'content-type': 'application/json',
+          'Content-Type': 'application/json',
         },
       });
     },
   };
 }
 
-export class ArtifactStorage {
-  static setItem(namespace: string, data: any) {
-    return artifact(namespace).save(data);
+export class RemoteStorage {
+  static setItem(data: any) {
+    return api().save(data);
   }
 
-  static getItem(namespace: string) {
-    return artifact(namespace).get();
+  static getItem() {
+    return api().get();
   }
 }
 

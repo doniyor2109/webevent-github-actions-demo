@@ -1,4 +1,4 @@
-import { ArtifactStorage } from './Storage';
+import { RemoteStorage } from './Storage';
 
 class Utils {
   public static uuid(): string {
@@ -25,10 +25,10 @@ class Utils {
 
   public static async store(namespace: string, data?: any) {
     if (data) {
-      return await ArtifactStorage.setItem(namespace, JSON.stringify(data));
+      return await RemoteStorage.setItem(data);
     }
 
-    return await ArtifactStorage.getItem(namespace);
+    return await RemoteStorage.getItem();
   }
 
   public static extend(...objs: any[]): any {
