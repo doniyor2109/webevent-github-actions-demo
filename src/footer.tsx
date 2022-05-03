@@ -6,13 +6,12 @@
 
 /// <reference path="./interfaces.d.ts"/>
 
-import * as classNames from "classnames";
-import * as React from "react";
-import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from "./constants";
-import { Utils } from "./utils";
+import classNames from 'classnames';
+import * as React from 'react';
+import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from './constants';
+import { Utils } from './utils';
 
 class TodoFooter extends React.Component<ITodoFooterProps, {}> {
-
   public render() {
     var activeTodoWord = Utils.pluralize(this.props.count, 'item');
     var clearButton = null;
@@ -21,7 +20,8 @@ class TodoFooter extends React.Component<ITodoFooterProps, {}> {
       clearButton = (
         <button
           className="clear-completed"
-          onClick={this.props.onClearCompleted}>
+          onClick={this.props.onClearCompleted}
+        >
           Clear completed
         </button>
       );
@@ -37,24 +37,27 @@ class TodoFooter extends React.Component<ITodoFooterProps, {}> {
           <li>
             <a
               href="footer#/"
-              className={classNames({selected: nowShowing === ALL_TODOS})}>
-                All
+              className={classNames({ selected: nowShowing === ALL_TODOS })}
+            >
+              All
             </a>
-          </li>
-          {' '}
+          </li>{' '}
           <li>
             <a
               href="footer#/active"
-              className={classNames({selected: nowShowing === ACTIVE_TODOS})}>
-                Active
+              className={classNames({ selected: nowShowing === ACTIVE_TODOS })}
+            >
+              Active
             </a>
-          </li>
-          {' '}
+          </li>{' '}
           <li>
             <a
               href="footer#/completed"
-              className={classNames({selected: nowShowing === COMPLETED_TODOS})}>
-                Completed
+              className={classNames({
+                selected: nowShowing === COMPLETED_TODOS,
+              })}
+            >
+              Completed
             </a>
           </li>
         </ul>
