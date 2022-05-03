@@ -4,9 +4,6 @@
   "github": {
     "enabled": false
   },
-  "builds": [
-    { "src": "dist/**", "use": "@vercel/static" }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
