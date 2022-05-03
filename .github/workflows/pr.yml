@@ -25,6 +25,7 @@ jobs:
         env:
           DEBUG: true
         with:
+          github-comment: false
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
