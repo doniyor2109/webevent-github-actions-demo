@@ -1,0 +1,32 @@
+{
+  "name": "webevent-github-actions",
+  "version": "0.0.1",
+  "repository": "git@github.com:doniyor2109/webevent-github-actions.git",
+  "author": "Doniyor Aliyev <doniyor2109@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "vercel dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/director": "^1.2.1",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.7"
+  },
+  "dependencies": {
+    "@types/classnames": "^2.2.6",
+    "@types/react": "^16.7.0",
+    "@types/react-dom": "^16.0.11",
+    "classnames": "^2.2.6",
+    "cors": "^2.8.5",
+    "director": "^1.2.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1",
+    "vercel": "^24.2.0"
+  }
+}
