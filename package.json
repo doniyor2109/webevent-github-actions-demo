@@ -8,11 +8,13 @@
   "scripts": {
     "start": "vercel dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "remind": "ts-node scripts/remind_todos.ts"
   },
   "devDependencies": {
     "@types/director": "^1.2.1",
     "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.4",
     "vite": "^2.9.7"
   },
@@ -27,6 +29,7 @@
     "director": "^1.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "telegraf": "^4.8.1",
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.1",
     "vercel": "^24.2.0"
