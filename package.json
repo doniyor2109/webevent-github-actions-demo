@@ -13,6 +13,9 @@
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "@types/director": "^1.2.1",
     "c8": "^7.11.2",
