@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm install
 
-      - run: npm run get-todos > todo_items.json
+      - run: npm run get-todos --silent > todo_items.json
         env:
           GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
           GH_GIST_ID: ${{ secrets.GH_GIST_ID }}

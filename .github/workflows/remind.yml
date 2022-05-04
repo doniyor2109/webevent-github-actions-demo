@@ -1,4 +1,4 @@
-name: Reminder
+name: Remind Todo items
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: "0 9 * * *"
 
 jobs:
-  remind:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
