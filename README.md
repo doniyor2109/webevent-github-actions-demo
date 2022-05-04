@@ -42,7 +42,7 @@ npm install
 
 
 ## Tech stack
-- Frontend (React / Typescript / Vite)
+- Frontend (React / Typescript / Vite) - [TodoMVC project](https://todomvc.com/examples/react/#/) 
 - Testing ([Vitest](https://vitest.dev/))
 - CI/CD ([Github Actions](https://github.com/features/actions))
 - Database ([GitHub Gists](https://gist.github.com/))

@@ -6,6 +6,13 @@ on:
       - main
 
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: superdispatch/actions/pr-limit@v1.6
+        with:
+          limit: 2
+
   test:
     strategy:
       fail-fast: false
