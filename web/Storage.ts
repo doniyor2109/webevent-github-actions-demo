@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.VITE_VERCEL_URL || location.origin;
+const BASE_URL = import.meta.VITE_VERCEL_URL || window.location.origin;
 
 function api() {
   const url = new URL('/api/todo', BASE_URL);
