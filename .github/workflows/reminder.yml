@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm install
 
-      - run: npm run remind
+      - run: npm run remind-todos
         env:
           GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
           GH_GIST_ID: ${{ secrets.GH_GIST_ID }}

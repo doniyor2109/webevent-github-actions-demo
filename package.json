@@ -9,7 +9,7 @@
     "start": "vercel dev",
     "build": "vite build",
     "preview": "vite preview",
-    "remind": "ts-node scripts/remind_todos.ts",
+    "remind-todos": "ts-node scripts/remind-todos.ts",
     "get-todos": "ts-node scripts/get-todos.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
