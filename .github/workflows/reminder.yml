@@ -1,8 +1,9 @@
 name: Deploy
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "* * * * *"
+    - cron: "0 9 * * *"
 
 jobs:
   remind:
