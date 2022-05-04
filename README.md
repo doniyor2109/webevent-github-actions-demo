@@ -6,15 +6,28 @@ Demo application for WebEvent GDG Tashkent. The application built to demonstrate
 - Add / Remove todo items
 - Send reminder to Telegram bot
 
-## Installation
-
-### Prerequisites
+## Prerequisites
 
 ```text
 npm@^8.5.0
 node@14
 ```
 
+You need Vercel account for Hosting and using Serverless functions.
+
+Provide following Environment variables to application
+- `GHP_TOKEN` - GitHub Personal Token for working with GitHub APIs
+- `GH_GIST_ID` - GitHub Gist ID needed to store Todo items in dedicated Gist
+- `TELEGRAM_BOT_TOKEN` - Telegram Bot Token need to send messages
+- `TELEGRAM_CHAT_ID` - Telegram User Chat ID needed to know whom to send message
+- `VERCEL_TOKEN` - Vercel token for Deployment
+- `VERCEL_ORG_ID` - Vercel Organization ID for configuring Vercel CLI
+- `VERCEL_PROJECT_ID` - Vercel Organization ID for configuring Vercel CLI
+
+
+
+
+## Installation
 
 ```bash
 npm install
