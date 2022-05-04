@@ -21,7 +21,11 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm install
 
-      - run: npm run test
+      - run: npm run coverage
+      - uses: actions/upload-artifact@v3
+        with:
+          name: coverage__node-${{ matrix.node }}__${{ matrix.os }}
+          path: coverage
 
   preview:
     runs-on: ubuntu-latest
@@ -39,5 +43,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist
 
 
