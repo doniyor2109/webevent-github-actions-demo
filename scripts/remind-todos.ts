@@ -5,8 +5,12 @@ import { TodoService } from '../services/TodoService';
 config();
 
 async function main() {
-  const chatId = 4097867;
+  const chatId = parseInt(process.env.TELEGRAM_CHAT_ID);
   const telegram = new Telegram(process.env.TELEGRAM_BOT_TOKEN);
+
+  if (!chatId) {
+    throw new Error('TELEGRAM_CHAT_ID is not provided');
+  }
 
   const todos = await new TodoService().get();
   const uncompletedTodos = todos.filter((todo) => !todo.completed);

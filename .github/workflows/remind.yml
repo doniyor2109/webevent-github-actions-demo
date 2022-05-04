@@ -17,6 +17,7 @@ jobs:
         env:
           GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
           GH_GIST_ID: ${{ secrets.GH_GIST_ID }}
+          TELEGRAM_CHAT_ID: 4097867
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
 
