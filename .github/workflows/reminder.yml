@@ -1,4 +1,4 @@
-name: Remind
+name: Reminder
 
 on:
   workflow_dispatch:

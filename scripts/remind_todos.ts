@@ -1,5 +1,8 @@
 import { Telegram } from 'telegraf';
+import { config } from 'dotenv';
 import { TodoService } from '../services/TodoService';
+
+config();
 
 async function main() {
   const chatId = 4097867;
