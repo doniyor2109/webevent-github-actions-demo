@@ -5,7 +5,6 @@
 - ? (checks)
 - Send reminder to telegram (cron)
 - Send all reminder on demand (workflow dispatch)
-- List all users and store in GitHub (artifact)
 - Deploy application to production
   - Deploy multiple apps (matrix)
   - Test on multiple OS (os)

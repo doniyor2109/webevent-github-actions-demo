@@ -9,15 +9,20 @@
     "start": "vercel dev",
     "build": "vite build",
     "preview": "vite preview",
-    "remind": "ts-node scripts/remind_todos.ts"
+    "remind": "ts-node scripts/remind_todos.ts",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@types/director": "^1.2.1",
+    "c8": "^7.11.2",
     "dotenv": "^16.0.0",
+    "jsdom": "^19.0.0",
     "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4",
-    "vite": "^2.9.7"
+    "vite": "^2.9.7",
+    "vitest": "^0.10.2"
   },
   "dependencies": {
     "@actions/artifact": "^1.0.0",
