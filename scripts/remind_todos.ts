@@ -2,7 +2,7 @@ import { Telegram } from 'telegraf';
 import { TodoService } from '../services/TodoService';
 
 async function main() {
-  const chatId = -1001612078211;
+  const chatId = 4097867;
   const telegram = new Telegram(process.env.TELEGRAM_BOT_TOKEN);
 
   const todos = await new TodoService().get();
