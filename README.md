@@ -9,11 +9,10 @@
   - Deploy multiple apps (matrix)
   - Test on multiple OS (os)
   - Deploy on approval (require approval)
-  - Deploy staging (environment)
+  - Deploy preview (environment)
   - Save build to artifacts (artifact)
 
 
 - DB (GitHub gists)
 - Deploy (Vercel)
 - Backend (Vercel Serverless)
-- 
