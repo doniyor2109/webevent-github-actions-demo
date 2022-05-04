@@ -14,5 +14,9 @@ jobs:
       - run: npm install
 
       - run: npm run remind
+        env:
+          GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
+          GH_GIST_ID: ${{ secrets.GH_GIST_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
 
