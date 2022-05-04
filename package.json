@@ -10,6 +10,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "remind": "ts-node scripts/remind_todos.ts",
+    "get-todos": "ts-node scripts/get-todos.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },

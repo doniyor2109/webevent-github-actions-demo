@@ -24,3 +24,10 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist
+
+
+
