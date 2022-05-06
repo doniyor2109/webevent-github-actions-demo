@@ -9,7 +9,7 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: superdispatch/actions/pr-limit@v1.6
+      - uses: superdispatch/actions/pr-limit@v1.6 # see https://github.com/superdispatch/actions/blob/main/pr-limit/README.md
         with:
           limit: 2
 

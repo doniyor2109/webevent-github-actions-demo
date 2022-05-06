@@ -3,7 +3,7 @@ name: Remind Todo items
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * *" # every day 9am
+    - cron: "0 9 * * *" # every day 9am in UTC
 
 jobs:
   main:

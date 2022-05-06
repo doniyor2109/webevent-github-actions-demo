@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: Production
+    environment: Production # see https://github.com/doniyor2109/webevent-github-actions-demo/settings/environments/482870891/edit
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
