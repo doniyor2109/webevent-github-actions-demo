@@ -49,9 +49,6 @@ npm install
 - Hosting ([Vercel](https://vercel.com/))
 - Backend ([Vercel Serverless Functions](https://vercel.com/docs/concepts/functions/serverless-functions))
 
-## Todo
-- [ ] Deploy on approval (requires public access)
-
 ### References
 
 - [Demo Telegram Bot](https://t.me/webevent_github_actions_demo_bot)
