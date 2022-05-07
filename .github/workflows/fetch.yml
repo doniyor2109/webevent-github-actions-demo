@@ -9,7 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
-      - run: npm install
+      - if: ${{ !env.ACT }}
+        run: npm install
 
       - run: npm run get-todos --silent > todo_items.json
         env:
