@@ -52,5 +52,5 @@ npm install
 ### References
 
 - [Demo Telegram Bot](https://t.me/webevent_github_actions_demo_bot)
-- [Demo Web Application](https://webevent-github-actions.vercel.app/)
+- [Demo Web Application](https://webevent-github-actions-demo.vercel.app/)
 

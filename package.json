@@ -1,7 +1,7 @@
 {
   "name": "webevent-github-actions",
   "version": "0.0.1",
-  "repository": "git@github.com:doniyor2109/webevent-github-actions.git",
+  "repository": "git@github.com:doniyor2109/webevent-github-actions-demo.git",
   "author": "Doniyor Aliyev <doniyor2109@gmail.com>",
   "license": "MIT",
   "private": true,

@@ -19,7 +19,7 @@ async function main() {
     await telegram.sendMessage(
       chatId,
       `You have ${uncompletedTodos.length} uncompleted todo items.
-Try finishing them by visiting https://webevent-github-actions.vercel.app/`
+Try finishing them by visiting https://webevent-github-actions-demo.vercel.app/`
     );
   } else {
     await telegram.sendMessage(
