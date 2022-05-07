@@ -22,11 +22,9 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: umidbekk/actions/prepare-node-repo@v2
         with:
           node-version: ${{ matrix.node }}
-      - run: npm install
 
       - run: npm run coverage
       - uses: actions/upload-artifact@v3
@@ -39,9 +37,7 @@ jobs:
     needs:
       - test
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-      - run: npm install
+      - uses: umidbekk/actions/prepare-node-repo@v2
 
       - run: npm run build
       - uses: amondnet/vercel-action@v20
