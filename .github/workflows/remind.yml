@@ -9,7 +9,9 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+      - run: npm install
 
       - run: npm run remind-todos
         env:

@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: Production # see https://github.com/doniyor2109/webevent-github-actions-demo/settings/environments/482870891/edit
     steps:
-      - uses: umidbekk/actions/prepare-node-repo@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+      - run: npm install
 
       - run: npm run build
       - uses: amondnet/vercel-action@v20
