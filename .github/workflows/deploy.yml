@@ -11,22 +11,14 @@ jobs:
     environment: Production # see https://github.com/doniyor2109/webevent-github-actions-demo/settings/environments/482870891/edit
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-      - run: npm install
 
       - uses: amondnet/vercel-action@v20
         with:
           github-comment: false
-          vercel-args: '--prod'
+          vercel-args: '--prod --force'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: dist
-
 
 
